@@ -1,2 +1,2 @@
-1,SuperBean,666,Metal
-2,HotBean,333,Chilly
+1,SuperBean,123,Fire
+2,HotBean,456,Ice
