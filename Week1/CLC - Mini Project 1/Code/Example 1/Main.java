@@ -14,7 +14,7 @@ public class Main {
 		System.out.println("Adding new Bean...");
 		
 		ArrayList<exampleBeanOne> tempList = reader.getMyBeans();
-		exampleBeanOne bean = new exampleBeanOne("HotBean", 2, 333, "Chilly");
+		exampleBeanOne bean = new exampleBeanOne("HotBean", 2, 456, "Ice");
 		tempList.add(bean);
 		
 		reader.writeFile("src\\Beans.txt");
