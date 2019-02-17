@@ -1,0 +1,2 @@
+1,SuperBean,666,Metal
+2,HotBean,333,Chilly
