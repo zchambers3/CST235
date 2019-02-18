@@ -6,10 +6,10 @@ public class exampleBeanOne implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private String beanName;
-	private int beanID;
-	private int beanNum;
-	private String beanWord;
+	private String beanName;			//Product description
+	private int beanID;				//Product identification number
+	private int beanNum;				//Number of products
+	private String beanWord;			//Product category
 	
 	public exampleBeanOne(){
 		beanName = null;
