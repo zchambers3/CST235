@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<h:body>
+	<br></br>
+
+
+	<ui:composition template="/layouts/commonLayout.xhtml">
+
+		<center>
+			<ui:insert name="header">
+        	Please enter your credentials
+        	</ui:insert>
+		</center>
+
+		<ui:define name="content">
+			<center>
+				<h:form>
+    				Email address:<br></br>
+					<h:inputText value="#{user.email}" required="true"
+						autocomplete="off" readonly="false"
+						requiredMessage="E-Mail address is required" />
+					<br></br>
+					<br></br>
+					Password:<br></br>
+					<h:inputSecret value="#{user.password}" required="true"
+						autocomplete="off" readonly="false"
+						requiredMessage="Password is required" />
+					<br></br>
+					<br></br>
+					<h:commandButton value="Login"
+						action="#{loginController.onFlash(user)}" />
+					<h:messages />
+				</h:form>
+			</center>
+		</ui:define>
+
+		<ui:insert name="footer">
+		</ui:insert>
+
+	</ui:composition>
+
+</h:body>
+</html>
