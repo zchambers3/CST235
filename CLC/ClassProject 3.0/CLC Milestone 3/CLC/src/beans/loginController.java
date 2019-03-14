@@ -12,7 +12,7 @@ public class loginController {
 		FacesContext ctx = FacesContext.getCurrentInstance();
 		String returnValue = ctx.getExternalContext().getRequestContextPath();
 		ctx.getExternalContext().getFlash().put("user", (user.firstName + " " + user.lastName));		
-		return "loggedIn.xhtml?faces-redirect=true";
+		return "NewSiteResponse.xhtml?faces-redirect=true";
 	}
 	
 	
