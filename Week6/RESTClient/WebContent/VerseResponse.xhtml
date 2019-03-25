@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<h:outputStylesheet library="css" name="layout.css" />
+
+</h:head>
+<body>
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<!-- Page to display results of the Book/Chapter/Verse search -->
+		<ui:define name="content" class="centerForm">
+			<div class="instructions">
+				<h1 class="searchText">#{bible.bookName}
+					#{bible.chapter}:#{bible.verse}</h1>
+			</div>
+			<div class="scriptureBlock">
+				<p class="scripture">#{bible.scripture}</p>
+			</div>
+			<!-- return to the search page -->
+			<div class="buttonText">
+				<h:button outcome="VerseSearch" value="Return to Search"
+					text-align="center"></h:button>
+			</div>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

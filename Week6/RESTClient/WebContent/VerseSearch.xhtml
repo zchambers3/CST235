@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<h:outputStylesheet library="css" name="layout.css" />
+
+</h:head>
+<body>
+
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<ui:define name="content" class="centerForm">
+			<div class="main">
+				<div class="instructions">
+					<h2 class="searchText">Search Bible Scriptures</h2>
+					<p class="searchText">Genesis, Exodus, and Leviticus available</p>
+					<p class="searchText">Please enter a book name, chapter, and
+						verse</p>
+				</div>
+				<div class="container">
+					<!-- Form with inputs for Book/Chapter/Verse search -->
+					<h:form>
+						<!-- Inputs are all required -->
+						<label for="book">Book</label>
+						<h:inputText id="book" value="#{bible.bookName}" class="textInput"
+							required="true" requiredMessage="Book name is required" />
+						<h:message for="book" style="color:red" />
+						<br></br>
+
+						<label for="chapter">Chapter</label>
+						<h:inputText id="chapter" value="#{bible.chapter}"
+							class="textInput" required="true"
+							requiredMessage="Chapter number is required" />
+						<h:message for="chapter" style="color:red" />
+						<br></br>
+
+						<label for="verse">Verse</label>
+						<h:inputText id="verse" value="#{bible.verse}" class="textInput"
+							required="true" requiredMessage="Verse number is required" />
+						<h:message for="verse" style="color:red" />
+						<br></br>
+						<br></br>
+
+						<h:commandButton action="#{formController.onSubmit(bible)}"
+							value="Search" class="textInput" />
+
+						<br></br>
+
+					</h:form>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

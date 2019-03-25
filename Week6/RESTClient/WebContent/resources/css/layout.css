@@ -1,0 +1,100 @@
+@charset "ISO-8859-1";
+
+
+html {
+	background-color: #e6dbc9;
+	
+}
+
+header {
+}
+.containerHeader {
+	background-color:#4b6777;
+	color: #e6dbc9;
+	padding: 50px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.scriptureBlock {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+}
+
+.searchText{
+	text-align: center;
+}
+
+.buttonText{
+	text-align: center;
+	margin-top: 100px;
+}
+
+
+body {	
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #e6dbc9;
+	text-align: center;
+}
+
+label {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.searchText{
+	color: #4b6777;
+}
+
+.formContainer {
+	margin-top: 100px;
+}
+
+.navButtons{
+	width: 100%;
+	text-align: center;
+}
+
+.formContainer p {
+	text-align: center;
+}
+
+.instructions{
+	margin-top: 75px;
+}
+
+.container {
+	width: 250px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px;
+}
+
+.navLink {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.textInput {
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+.center {
+	text-align: center;
+}
+
+.centerForm {
+	text-align: center;
+}
+

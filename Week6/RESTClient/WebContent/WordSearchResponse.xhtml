@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<h:outputStylesheet library="css" name="layout.css" />
+</h:head>
+<body>
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<ui:define name="content" class="centerForm">
+			<div class="instructions">
+				<!-- Web page display results of the word search and returns the passage -->
+				<h1 class="searchText">The first occurrence of the word
+					"#{searchString.searchWord}" is:</h1>
+				<br></br>
+				<h1 class="searchText">#{bible.bookName}
+					#{bible.chapter}:#{bible.verse}</h1>
+			</div>
+			<div class="scriptureBlock">
+				<p class="scripture">#{bible.scripture}</p>
+			</div>
+			<div class="buttonText">
+				<h:button outcome="WordSearch" value="Return to Search"
+					text-align="center"></h:button>
+			</div>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

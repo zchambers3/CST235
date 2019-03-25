@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<h:outputStylesheet library="css" name="layout.css" />
+
+</h:head>
+<body>
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<ui:define name="content" class="centerForm">
+			<div class="main">
+				<div class="instructions">
+				<!-- Introduction and information about the page -->
+					<h2 class="searchText">Bible REST Service Client</h2>
+					<p class="searchText">This website is a client program to test
+						and demonstrate a REST web service</p>
+					<p class="searchText">The rest service provides the ability to
+						search in three ways</p>
+					<p class="searchText">Search by book, chapter, and verse</p>
+					<p class="searchText">Search for first occurrence of a word and
+						return its verse</p>
+					<p class="searchText">Search for the amount of times a word
+						occurs and return that number</p>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

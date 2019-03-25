@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>Bible Rest Service</title>
+</h:head> 
+	<body>
+		<h1>Bible Rest Services</h1>
+		<h2>Works for first three books. Genesis, Exodus, and Leviticus</h2>
+		<h3>Get Verse</h3>
+		<p>Search by the name of a bible book, chapter number, and verse number. It returns a Bible object that contains the book name, chapter number, verse number and scripture.</p>
+		<p>http://localhost:8080/BibleRestProgram/rest/bible/getverse/{book}/{chapter#}/{verse#}</p>
+		<h3>Get First Occurrence of word</h3>
+		<p>Search for the first time a word appears in the bible. It returns a Bible object containing the book name, chapter number, verse number, and the scripture.</p>
+		<p>http://localhost:8080/BibleRestProgram/rest/bible/findfirstword/{searchword}</p>
+		<h3>Get word count</h3>
+		<p>Search the bible for a word and returns the number of times it occurs in the bible.</p>
+		<p>http://localhost:8080/BibleRestProgram/rest/bible/getwordcount/{searchword}</p>	
+	</body> 
+</html>

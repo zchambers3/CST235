@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<h:outputStylesheet library="css" name="layout.css" />
+
+</h:head>
+<body>
+
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<ui:define name="content" class="centerForm">
+			<div class="main">
+				<div class="instructions">
+					<!-- Page to input a word and search for the amount of times it occurs -->
+					<h2 class="searchText">Search Bible Scriptures</h2>
+					<p class="searchText">Genesis, Exodus, and Leviticus available</p>
+					<p class="searchText">Please enter a word to find how many
+						times it is in the Bible</p>
+				</div>
+				<div class="container">
+					<!-- Form with all inputs required -->
+					<h:form>
+						<label for="Search Word">Search Word</label>
+						<h:inputText id="searchWord" value="#{searchString.searchWord}"
+							class="textInput" required="true"
+							requiredMessage="Search word is required" />
+						<h:message for="searchWord" style="color:red" />
+
+						<br></br>
+						<br></br>
+
+						<h:commandButton
+							action="#{formController.onWordCount(searchString)}"
+							value="Search" class="textInput" />
+
+						<br></br>
+
+					</h:form>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>
