@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+
+
+	<head>
+		<title><ui:insert name="pageTitle">RAPTOR DESIGNS</ui:insert></title>
+	</head>
+	
+	<body>
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="content">
+		<p>Add items to your site below!</p><br></br>
+		<h:form>
+			Site ID:<h:inputText value="#{Sites.id}" required="true" autocomplete="off" readonly="false" requiredMessage="Site ID is required" />
+			<br></br>
+			<br></br>
+			
+			Name:<h:inputText value="#{Sites.name}" required="true" autocomplete="off" readonly="false" requiredMessage="Site name is required" />
+			<br></br>
+			<br></br>
+			
+			Color:<h:inputText value="#{Sites.color}" required="true" autocomplete="off" readonly="false" requiredMessage="Color is required" />
+			<br></br>
+			<br></br>
+				
+			<h:commandButton value="Add Site" action="#{NewSiteFormController.newSite(Sites)}" />
+			<br></br>
+			<br></br>
+			
+		</h:form>
+	</ui:define>
+	</ui:composition>	
+	
+	</body>
+
+</html>
